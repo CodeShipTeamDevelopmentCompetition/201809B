@@ -11,7 +11,77 @@
 </head>
 
 <body>
+    <nav class="header-menu">
+        <h1>SONIC GAME OFF</h1>
+        <ul class="horizontal-list sm-hidden">
+            <li>
+                <a href='./About.html'>About</a>
+            </li>
+            <li>
+                <a href='#'>News</a>
+            </li>
+            <li>
+                <a href='./event.html'>Events</a>
+            </li>
+            <li>
+                <a href='#'>Illustlations</a>
+            </li>
+            <li>
+                <a href="#">Pictures</a>
+            </li>
+        </ul>
+        <div role="button" class="hamburger sm-show js-responsive-menu-button">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <nav class="hidden js-responsive-menu">
+        <ul class="vertical-list sm-show">
+            <li>
+                <a href='./About.html'>About</a>
+            </li>
+            <li>
+                <a href='#'>News</a>
+            </li>
+            <li>
+                <a href='./event.html'>Events</a>
+            </li>
+            <li>
+                <a href='#'>Illustlations</a>
+            </li>
+            <li>
+                <a href="#">Pictures</a>
+            </li>
+        </ul>
+    </nav>
 
+    <footer>
+        <small>Twitter:@########</small>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+            /*
+             @param $triggerButton 
+             @param $toggleMenu  
+             @param switchMenuStateClass
+        */
+
+            const $triggerButton = $(".js-responsive-menu-button");
+            const $toggleMenu = $(".js-responsive-menu");
+            const switchMenuStateClass = "hidden";
+
+            $triggerButton.on('click', function () {
+                $toggleMenu.toggleClass(switchMenuStateClass);
+            })
+        })
+    </script>
 </body>
 
 </html>

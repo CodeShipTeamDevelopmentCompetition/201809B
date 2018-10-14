@@ -22,3 +22,85 @@ h4 {
 .theme-fontFamily {
   font-family: Meiryo;
 }
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.618rem 1.618rem;
+  background-color:#f9cf00;
+
+}
+
+.horizontal-list {
+  display: flex;
+}
+
+.horizontal-list li {
+  padding: 0.618em 1.618em;
+  text-align: center;
+}
+
+.horizontal-list li:nth-of-type(n+2) {
+  border-left: none;
+}
+
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-list li {
+  width: 100%;
+  padding: 1.618rem 0;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  border: 1px solid #000;
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.hamburger>div {
+  border-bottom: 1px solid #000;
+}
+
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .sm-hidden {
+      display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .sm-show {
+      display: none;
+  }
+}
+footer{
+  text-align: center;
+}

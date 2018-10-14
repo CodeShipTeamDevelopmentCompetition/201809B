@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./index-sub.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="header-menu">
+                <h1>SONIC GAME OFF</h1>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            News
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Illustlations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Pictures
+                        </a>
+                    </li>
+                </ul>
+                <div role="button" class="hamburger sm-show js-responsive-menu-button">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+            <nav class="hidden js-responsive-menu">
+                <ul class="vertical-list sm-show">
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">News</a>
+                    </li>
+                    <li>
+                        <a href="">Events</a>
+                    </li>
+                    <li>
+                        <a href="">Illustlations</a>
+                    </li>
+                    <li>
+                        <a href="">Pictures</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <footer>
+            <small>Twitter:@#############</small>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(function () {
+
+            const $triggerButton = $(".js-responsive-menu-button");
+            const $toggleMenu = $(".js-responsive-menu");
+            const switchmenuStateClass = "hidden";
+            $triggerButton.on('click', function () {
+                $toggleMenu.toggleClass(switchMenuStateClass);
+            })
+        })
+    </script>
+</body>
+
+</html>
