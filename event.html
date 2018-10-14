@@ -20,54 +20,58 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <nav class="header-menu">
-            <h1>SONIC GAME OFF</h1>
-            <ul class="horizontal-list sm-hidden" style="list-style: none;">
-                <li>
-                    <a href='./About.html' class="menu">About</a>
-                </li>
-                <li>
-                    <a href='#' class="menu">News</a>
-                </li>
-                <li>
-                    <a href='./event.html' class="menu">Events</a>
-                </li>
-                <li>
-                    <a href='#' class="menu">Illustlations</a>
-                </li>
-                <li>
-                    <a href="#" class="menu">Pictures</a>
-                </li>
-            </ul>
-            <div role="button" class="hamburger sm-show js-responsive-menu-button">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </nav>
-        <nav class="hidden js-responsive-menu">
-            <ul class="vertical-list sm-show" style="list-style: none;">
-                <li>
-                    <a href='./About.html' class="menu">About</a>
-                </li>
-                <li>
-                    <a href='#' class="menu">News</a>
-                </li>
-                <li>
-                    <a href='./event.html' class="menu">Events</a>
-                </li>
-                <li>
-                    <a href='#' class="menu">Illustlations</a>
-                </li>
-                <li>
-                    <a href="#" class="menu">Pictures</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<body class="theme-fontFamily">
+        <header>
+                <nav class="header-menu">
+        
+                    <a href="index.html" style="text-decoration: none; color:black;">
+                        <h1>SONIC GAME OFF</h1>
+                    </a>
+        
+                    <ul class="horizontal-list sm-hidden" style="list-style: none;">
+                        <li>
+                            <a href='./About.html' class="menu">About</a>
+                        </li>
+                        <li>
+                            <a href='#' class="menu">News</a>
+                        </li>
+                        <li>
+                            <a href='./event.html' class="menu">Events</a>
+                        </li>
+                        <li>
+                            <a href='#' class="menu">Illustlations</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">Pictures</a>
+                        </li>
+                    </ul>
+                    <div role="button" class="hamburger sm-show js-responsive-menu-button">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </nav>
+                <nav class="hidden js-responsive-menu">
+                    <ul class="vertical-list sm-show" style="list-style: none;">
+                        <li>
+                            <a href='./About.html' class="menu">About</a>
+                        </li>
+                        <li>
+                            <a href='#' class="menu">News</a>
+                        </li>
+                        <li>
+                            <a href='./event.html' class="menu">Events</a>
+                        </li>
+                        <li>
+                            <a href='#' class="menu">Illustlations</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu">Pictures</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
     <main class="l-main">
         <section class="title-box box">
@@ -211,6 +215,26 @@
     <footer>
         footer
     </footer>
+    <script>
+            $(document).ready(function () {
+                $('.slider').bxSlider();
+            });
+            $(function () {
+                /*
+                 @param $triggerButton 
+                 @param $toggleMenu  
+                 @param switchMenuStateClass
+            */
+    
+                const $triggerButton = $(".js-responsive-menu-button");
+                const $toggleMenu = $(".js-responsive-menu");
+                const switchMenuStateClass = "hidden";
+    
+                $triggerButton.on('click', function () {
+                    $toggleMenu.toggleClass(switchMenuStateClass);
+                })
+            })
+        </script>
 </body>
 
 </html>
