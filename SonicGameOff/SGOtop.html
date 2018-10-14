@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="SGOtop.css">
+    <title>ソニック ゲームオフ</title>
+</head>
+
+<body class="container">
+    <nav class="l-nav">
+        <div class="module-title-box">
+            <h1 class="module-maintitle">SONIC</h1>
+            <h1 class="module-subtitle">GAME OFF</h1>
+        </div>
+        <div class="module-humberger"><span></span><span></span><span></span><span>Menu</span></div>
+        <div class="module-menu">
+            <ul class="module-menu-box">
+                <li class="module-menu-conts"><a href="">About</a></li>
+                <li class="module-menu-conts"><a href="">News</a></li>
+                <li class="module-menu-conts"><a href="">Events</a></li>
+                <li class="module-menu-conts"><a href="">Illustrations</a></li>
+                <li class="module-menu-conts"><a href="">Contacts</a></li>
+            </ul>
+        </div>
+        <a href=""></a>
+        <!-- ↑ツイッターアイコン -->
+    </nav>
+    
+    <main class="l-main">
+        <img src="Sonic-Generations.jpg" class="module-top-img">
+        <!-- <div class="slideshow-parent"> -->
+            <!-- <div class="slideshow"> -->
+                <!-- <div class="slideshow-slides"> -->
+                    <!-- <a class="slide" id="slide-1"><img class="slideshow-img" id="holder" data-src="holder.js/1600x465?theme=sky&text=Sky" alt="walk"></a> -->
+                    <!-- <a class="slide" id="slide-2"><img class="slideshow-img" id="holder" data-src="holder.js/1600x465?theme=vine&text=Vine" alt="jellyfish"></a> -->
+                    <!-- <a class="slide" id="slide-3"><img class="slideshow-img" id="holder" data-src="holder.js/1600x465?theme=lava&text=Lava" alt="sea"></a> -->
+                    <!-- <a class="slide" id="slide-4"><img class="slideshow-img" id="holder" data-src="holder.js/1600x465?theme=social&text=Social" alt="moon"></a> -->
+                <!-- </div> -->
+                <!-- <div class="slideshow-nav"> -->
+                    <!-- <a href="#" class="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a> -->
+                    <!-- <a href="#" class="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a> -->
+                <!-- </div> -->
+                <!-- <div class="slideshow-indicator"></div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    </main>
+
+    <footer class="l-footer">
+    
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+    <script src="https://hrdtbs.github.io/basic-example-of-html-css-javascript/assets/imsky-holder/holder.min.js"></script>
+    <script>
+            $(function () {
+                let $container = $(".slideshow")
+                    $slideGroup = $(".slideshow-slides"),
+                    $slide = $slideGroup.find(".slide"),
+                    $slideshowIndicator = $(".slideshow-indicator"),
+                    $nav = $(".slideshow-nav")
+                    $prev = $(".prev"),
+                    $next = $(".next"),
+                    currentIndex = 0,
+                    interval = 5000,
+                    slideCount = 0,
+                    timer = 0,
+                    Indicator = "",
+                    duration = 1500,
+                    $humberger = $(".module-humberger"),
+                    $menu = $(".module-menu");
+
+
+                $(window).on("load", function () {
+                    let holder = $("#holder");
+                    Holder.run({
+                        images: holder
+                    });
+                });
+
+                $humberger.on({
+                    click:function(event){
+                        console.log("kita2");
+                        $(this).toggleClass('active');
+                        if($(this).hasClass('active')){
+                            $menu.addClass('active');
+                        }else{
+                            $menu.removeClass('active');
+                        }
+                    }
+                });
+
+                $slide.each(function (index) {
+                    console.log("kita4");
+                    $(this).css({ left: 100 * index + "%" });
+                    let id = $(this).attr("id");
+                    Indicator += '<a href = "#' + id + '">' + (1 + index) + '</a>';
+                    slideCount += 1;
+                });
+                $slideshowIndicator.html(Indicator);
+                var $IndicatorChild = $slideshowIndicator.find(">a");
+
+
+                goToSlide = (index) => {
+
+                    $(".slideshow-slides").animate({
+                        left: -100 * index + "%"
+                    }, duration)
+
+                    currentIndex = index;
+                    updateNav();
+                }
+                updateNav = () => {
+
+                    if (currentIndex === 0) {
+                        $prev.addClass("disabled");
+                        $next.removeClass("disabled");
+                    } else if (currentIndex === slideCount - 1) {
+                        $prev.removeClass("disabled");
+                        $next.addClass("disabled");
+                    } else {
+                        $prev.removeClass("disabled");
+                        $next.removeClass("disabled");
+                    }
+                    $IndicatorChild.removeClass("active").eq(currentIndex).addClass("active");
+                }
+
+                updateNav();
+
+                startTimer = () => {
+                    timer = setInterval(function () {
+
+                        let nextIndex = (currentIndex + 1) % slideCount;
+                        goToSlide(nextIndex);
+
+                    }, interval);
+                }
+
+
+                function stopTimer() {
+                    clearInterval(timer);
+                }
+
+                startTimer();
+
+                $container.on({
+                    mouseenter: stopTimer,
+                    mouseleave: startTimer
+                })
+
+                $IndicatorChild.on({
+                    click: function (event) {
+                        event.preventDefault();
+                        // $(this).hasClass("active")
+                        goToSlide($IndicatorChild.index(this));
+
+                    }
+                })
+
+                $nav.on({
+                    click: function (event) {
+                        event.preventDefault();
+                        if ($(this).hasClass("prev")) {
+                            goToSlide(currentIndex - 1);
+                        } else {
+                            goToSlide(currentIndex + 1);
+                        }
+                    }
+                })
+
+
+
+            });
+    </script>
+</body>
+
+</html>
