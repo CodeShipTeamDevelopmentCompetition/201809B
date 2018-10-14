@@ -25,12 +25,9 @@ h4 {
     "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-<<<<<<< HEAD
 .sm-hidden {
   list-style: none;
 }
-=======
->>>>>>> 97584e5cbb5a5ff1d21441e43608fef1bcb4bef1
 
 .menu {
   text-decoration: none;
@@ -42,12 +39,8 @@ h4 {
   align-items: center;
   justify-content: space-between;
   padding: 0.618rem 1.618rem;
-<<<<<<< HEAD
   background-color: #f9cf00;
-=======
-  background-color:#4484ce;
-
->>>>>>> 97584e5cbb5a5ff1d21441e43608fef1bcb4bef1
+  background-color: #4484ce;
 }
 
 .horizontal-list {
@@ -109,9 +102,4 @@ h4 {
 }
 footer {
   text-align: center;
-<<<<<<< HEAD
 }
-=======
-  background-color:#d9d9d9;
-}
->>>>>>> 97584e5cbb5a5ff1d21441e43608fef1bcb4bef1
