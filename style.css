@@ -20,9 +20,10 @@ h4 {
 }
 
 .theme-fontFamily {
-  font-family: Meiryo;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans",
+    "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-
 
 ul {
   list-style: none;
@@ -33,14 +34,12 @@ a {
   color: inherit;
 }
 
-
 .header-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.618rem 1.618rem;
-  background-color:#f9cf00;
-
+  background-color: #f9cf00;
 }
 
 .horizontal-list {
@@ -52,7 +51,7 @@ a {
   text-align: center;
 }
 
-.horizontal-list li:nth-of-type(n+2) {
+.horizontal-list li:nth-of-type(n + 2) {
   border-left: none;
 }
 
@@ -81,10 +80,9 @@ a {
   cursor: pointer;
 }
 
-.hamburger>div {
+.hamburger > div {
   border-bottom: 1px solid #000;
 }
-
 
 .hidden {
   display: none;
@@ -92,15 +90,15 @@ a {
 
 @media (max-width: 700px) {
   .sm-hidden {
-      display: none;
+    display: none;
   }
 }
 
 @media (min-width: 700px) {
   .sm-show {
-      display: none;
+    display: none;
   }
 }
-footer{
+footer {
   text-align: center;
 }

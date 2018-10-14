@@ -1,4 +1,35 @@
 @charset "utf-8";
 
 .l-main {
+  text-align: center;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  padding: 14px;
+}
+
+.list {
+  text-align: left;
+}
+
+.title-text {
+  font-size: 0.7em;
+  width: 50%;
+  position: relative;
+}
+
+.title-text p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+}
+
+.title {
+  padding: 14px;
 }
