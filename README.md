@@ -30,7 +30,7 @@
 
 ## タイポグラフィ
 
-aaaaaaaaaaa
+font-family: Meiryo;
 
 ## 担当
 
