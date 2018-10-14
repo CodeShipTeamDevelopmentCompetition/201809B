@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-.theme-background {
-}
+.theme-background {}
 
 h1 {
   font-size: 36.65px;
@@ -81,7 +80,7 @@ h4 {
   cursor: pointer;
 }
 
-.hamburger > div {
+.hamburger>div {
   border-bottom: 1px solid #000;
 }
 
@@ -100,6 +99,64 @@ h4 {
     display: none;
   }
 }
+
 footer {
   text-align: center;
+}
+
+.km-img1 {
+  background-image: url(/Users/keitamiyagawa/Documents/名称未設定フォルダ/201810A/slideshow-5.jpg);
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.km-img2 {
+  background-image: url(/Users/keitamiyagawa/Documents/名称未設定フォルダ/201810A/slideshow-3.jpg);
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.km-img3 {
+  background-image: url(/Users/keitamiyagawa/Documents/名称未設定フォルダ/201810A/slideshow-1.jpg);
+  width: 100%;
+  height: 700px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.km-link {
+  display: flex;
+  /* 子要素をflexboxで揃える */
+  flex-direction: column;
+  /* 子要素をflexboxにより縦方向に揃える */
+  justify-content: center;
+  /* 子要素をflexboxにより中央に配置する */
+  align-items: center;
+  /* 子要素をflexboxにより中央に配置する */
+  background-color: #d9d9d9;
+  width: 70%;
+  height: 500px;
+  opacity: 0.6;
+
+}
+
+
+
+.km-word1 {
+  font-size: 70px;
+  color: black;
+
 }
