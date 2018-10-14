@@ -1,8 +1,25 @@
 .module-card{
     padding:10px 0 10px 0;
-    margin: 10px 0 10px 0;
+    margin: 10px 5px 10px 5px;
+    text-align: center;
+    color:  #4484ce;
 }
-.l-archives div p{
-    margin:0;
+.l-main {
+    text-align: center;
+  }
 
+.l-archives li{
+    margin:0 10px 0 10px;
+    font-size: 0.8em;
+    list-style: none;
+}
+
+.module-card-block{
+    background-color: grey;
+    width:auto ;
+    height: 180px;
+}
+
+.module-conts{
+    color: black;
 }
