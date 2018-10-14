@@ -99,3 +99,8 @@
 .Games-list-Switch li:after {
   content: "Switch";
 }
+
+.selfintro-img {
+  width: 80%;
+  object-fit: contain;
+}
