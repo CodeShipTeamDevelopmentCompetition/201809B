@@ -41,7 +41,7 @@
 }
 
 .Games-list {
-  border: solid 2px #ffb03f;
+  border: solid 2px #f19f4d;
   padding: 0.5em;
   position: relative;
   margin-top: 2em;
@@ -102,5 +102,19 @@
 
 .selfintro-img {
   width: 80%;
-  object-fit: contain;
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  .selfintro {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .selfintro-img {
+    width: 45%;
+  }
+  .selfintro-text {
+    width: 45%;
+  }
 }
