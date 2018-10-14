@@ -2,3 +2,23 @@
 
 .theme-background {
 }
+
+h1 {
+  font-size: 36.65px;
+}
+
+h2 {
+  font-size: 22.65px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 8.653px;
+}
+
+.theme-fontFamily {
+  font-family: Meiryo;
+}
