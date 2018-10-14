@@ -25,11 +25,11 @@ h4 {
     "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-ul {
+.sm-hidden {
   list-style: none;
 }
 
-a {
+.menu {
   text-decoration: none;
   color: inherit;
 }
