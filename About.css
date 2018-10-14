@@ -33,3 +33,69 @@
 .title {
   padding: 14px;
 }
+
+.Games-list-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.Games-list {
+  border: solid 2px #ffb03f;
+  padding: 0.5em;
+  position: relative;
+  margin-top: 2em;
+  width: 40%;
+}
+
+.Games-list li {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.4em;
+  border-bottom: dashed 1px silver;
+  list-style-type: none !important;
+}
+
+.Games-list li:last-of-type {
+  border-bottom: none;
+}
+
+.Games-list li:before {
+  /*リスト内のアイコン*/
+  font-family: "Font Awesome 5 Free";
+  content: "\f138"; /*アイコン種類*/
+  position: absolute;
+  left: 0.5em; /*左端からのアイコンまで*/
+  color: #ffb03f; /*アイコン色*/
+}
+
+.Games-list li:after {
+  /*タイトルタブ*/
+  background: #ffb03f;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  left: -2px;
+  bottom: 100%;
+  padding: 1px 7px;
+  letter-spacing: 0.05em; /*字間*/
+}
+
+.Games-list-PS3 li:after {
+  content: "PS3";
+}
+
+.Games-list-Wii li:after {
+  content: "Wii";
+}
+
+.Games-list-WiiU li:after {
+  content: "WiiU";
+}
+
+.Games-list-PS4 li:after {
+  content: "PS4";
+}
+
+.Games-list-Switch li:after {
+  content: "Switch";
+}
