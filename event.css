@@ -3,10 +3,27 @@
     margin: 10px 5px 10px 5px;
     text-align: center;
     color:  #4484ce;
+    background-color: #4484ce;
 }
 .title-box {
     display: flex;
     justify-content: space-around;
+  }
+  .title-text {
+    font-size: 0.7em;
+    width: 50%;
+    position: relative;
+  }
+  
+  .title-text p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50%;
+  }
+  
+  .title {
+    padding: 14px;
   }
   
   .box {
@@ -16,11 +33,14 @@
     text-align: center;
   }
 
+.l-archives{
+    text-align: left;
+  }
 .l-archives li{
     margin:0 10px 0 10px;
     font-size: 0.8em;
     list-style: none;
-    text-align: left;
+   
 }
 
 .module-card-block{
@@ -31,4 +51,10 @@
 
 .module-conts{
     color: black;
+}
+.card-header{
+    background-color: #f9cf00;
+}
+.card{
+    background-color: #4484ce;
 }
